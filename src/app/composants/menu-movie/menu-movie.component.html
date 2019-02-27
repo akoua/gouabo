@@ -1,0 +1,45 @@
+<h3>Recheche</h3>
+
+<mat-grid-list cols="1" rowHeight="2:1"   gutterSize="5%">
+    <mat-grid-tile
+    *ngFor="let model of models"
+      [colspan]="model.cols"
+      [rowspan]="model.rows"
+      >    
+    
+        <!-- <img mat-card-image src="../../../assets/burger.jpeg" alt="img">       -->
+        <div plyr style="width: 90%;" plyrTitle="Video 1" [plyrSources]="videoSources" [plyrOptions]="optionsVideo" (plyrInit)="player = $event" (plyrPlay)="played($event)"></div>
+      
+      <mat-grid-tile-footer fxLayout="column stretch">
+          <h3 md-line>{{model.name}}</h3>
+          <span md-line>{{model.status}}</span>
+          <button md-icon-button (click)="showDetails(model)" fxLayoutAlign="end center">            
+              <mat-icon >duo</mat-icon>
+          </button>
+      </mat-grid-tile-footer>
+  
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <vg-player>
+    <vg-overlay-play></vg-overlay-play>
+    <vg-controls>
+      <vg-play-pause> </vg-play-pause>
+      <vg-time-display></vg-time-display>
+      <vg-mute></vg-mute>
+      <vg-volume></vg-volume>
+      
+      <vg-scrub-bar>
+        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+      </vg-scrub-bar>
+
+      <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    
+    <video #myVideoRef src="../../../assets/trier.MP4"
+    [vgMedia]="myVideoRef"
+    >
+    </video>
+  </vg-player>

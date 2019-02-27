@@ -1,0 +1,48 @@
+<mat-sidenav-container class="sidenav-container" class="mat-elevation-z5">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)"      
+      >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item (click)="drawer.toggle()">Nos meilleurs plats</a>
+      <a mat-list-item href="#">Nos meilleurs cuisiniers (ières)</a>
+      <a mat-list-item href="#">Plats d'ailleurs</a>
+      <a mat-list-item href="#">Restaurant proche</a>      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span (click)="drawer.toggle()" style="cursor: pointer;">likefe</span>
+      
+      <div 
+      fxFlex
+      fxLayout="row nowrap"
+      fxLayoutAlign="end end"
+      >
+      <button mat-button     
+      >          
+          <mat-icon aria-label="icon">person</mat-icon>
+        Se connecter                
+      </button>
+      <button mat-button >          
+          <mat-icon aria-label="icon">person_add</mat-icon>
+        S'inscrire                
+      </button>
+      </div>
+      
+      
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

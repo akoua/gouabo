@@ -1,0 +1,58 @@
+<h3 fxLayoutAlign="center start" >Meilleurs plats</h3>
+<div
+fxLayout="row wrap" fxLayout.xs="column"  fxLayoutAlign="center" fxLayoutAlign.xs="start" fxLayoutGap="0.8%" >
+  
+  <mat-card class="card-picture"  *ngFor="let plat of plats" >
+        <mat-card-header>
+            <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+                <span>{{plat}}</span>                                  
+              </mat-card-title>
+          <mat-card-subtitle >Pays</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="content" (click)="readMovie()">
+          <img mat-card-image src="../../../assets/burger.jpeg" alt="img">
+        </mat-card-content> 
+      </mat-card>    
+</div>
+
+<h3 fxLayoutAlign="center start" fxLayoutAlign.xs="center end" style="background-color: lightgray">Meilleurs restaurants</h3>
+<div
+fxLayout="row wrap" fxLayout.xs="column"  fxLayoutAlign="center" fxLayoutGap="0.8%" >
+  
+  <mat-grid-list cols="1" rowHeight="3:1" gutterSize="5px">
+    <mat-grid-tile
+      *ngFor="let plat of plats"  
+      >
+      <div fxLayout="row stretch" fxLayoutAlign="start start" fxLayoutGap="0.6%" fxLayoutGap.sm="0.2%">
+          <img mat-card-image src="../../../assets/burger.jpeg" alt="img" fxFlex="1 1 30%"  >
+          <div fxLayout="column stretch"  fxFlex="1 1 70%" fxFlex.sm="1 1 100%">
+            <span fxLayoutAlign="center start">plat</span>
+            <span><strong>Spécialité:</strong>Foutou banane, agouti fumé ...</span>
+            <span><strong>Localisation:</strong>Cocody Saint 47 rue prince</span>
+            <span><strong>Contacts:</strong>78-21-65-19 / 02-78-95-02</span>
+            <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="2%" >
+                <mat-icon>duo</mat-icon>
+                <mat-icon>duo</mat-icon>
+                <mat-icon>duo</mat-icon>
+            </div>
+          </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <!-- <mat-card  *ngFor="let plat of plats">
+        <mat-card-header>
+            <mat-card-title fxLayout.gt-xs="column" fxLayout.xs="column">
+                <span>{{plat}}</span>                                  
+              </mat-card-title>          
+        </mat-card-header>
+        <mat-card-content>
+          <img mat-card-image src="../../../assets/burger.jpeg" alt="img">
+        </mat-card-content> 
+      <mat-card-footer fxLayout="column"  >
+        <span><strong></strong> Cocody Saint 47 rue prince</span>
+        <span><strong>Contacts:</strong>78-21-65-19 / 02-78-95-02</span>
+        
+      </mat-card-footer>
+      </mat-card>     -->
+
+</div>

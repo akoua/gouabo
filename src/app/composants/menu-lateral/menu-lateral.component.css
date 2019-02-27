@@ -1,0 +1,35 @@
+.img {
+    width: 100%;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
+  .card-picture {
+    width: 40%;
+    margin-bottom: 2%;
+  }
+
+  .card-restaurant {
+    width: 70%;
+    height: 10%;
+    margin-bottom: 2%;
+  }
+  mat-grid-tile {
+    background:lightgrey;
+  }
+
+  mat-grid-list{
+      width: 100%;
+      border: 1px;
+      border-radius: 5px;
+  }
+
+  .content{
+      cursor: pointer;
+  }
+
+  @media only screen and (max-width:599px){
+    .card-picture {
+        width: 80%;
+        margin-bottom: 2%;
+      }
+  }
