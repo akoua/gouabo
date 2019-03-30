@@ -1,4 +1,10 @@
 <h3>Recheche</h3>
+<mat-form-field>
+  <input matInput placeholder="Recherche" [matAutocomplete]="liste" [formControl]="searchControl" >
+</mat-form-field>
+<mat-autocomplete #liste="matAutocomplete">
+  <mat-option *ngFor="let model of modelFiltered | async" [value]="model"> {{model}} </mat-option>
+</mat-autocomplete>
 
 <mat-grid-list cols="1" rowHeight="2:1"   gutterSize="5%">
     <mat-grid-tile
@@ -21,7 +27,7 @@
     </mat-grid-tile>
   </mat-grid-list>
 
-  <vg-player>
+  <!-- <vg-player>
     <vg-overlay-play></vg-overlay-play>
     <vg-controls>
       <vg-play-pause> </vg-play-pause>
@@ -42,4 +48,4 @@
     [vgMedia]="myVideoRef"
     >
     </video>
-  </vg-player>
+  </vg-player> -->

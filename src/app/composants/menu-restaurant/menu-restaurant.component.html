@@ -1,23 +1,4 @@
-    <div
-    fxLayout="row wrap" fxLayout.xs="column"  fxLayoutAlign="center"
-    fxLayoutAlign.xs="start" fxLayoutGap="0.8%" fxLayoutGap.xs="0.2%" >
-      
-      <mat-card class="card-picture"  *ngFor="let plat of plats" >
-            <mat-card-header>
-                <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-                    <span>{{plat}}</span>                                  
-                  </mat-card-title>
-              <mat-card-subtitle >Pays</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content class="content" (click)="readMovie()">
-              <img mat-card-image src="../../../assets/burger.jpeg" alt="img">
-            </mat-card-content> 
-          </mat-card>    
-    </div>  
-  <!-- <mat-step label="Meilleurs restaurants">    
-       
-        
-    <div fxLayout="row"
+<div fxLayout="row"
     style="margin-bottom: 0.5%;"
     class="mat-elevation-z3"
     fxLayoutAlign="start stretch"
@@ -107,5 +88,3 @@
       </mat-card-actions>
   </mat-card>
     </div>  
- 
-  </mat-step> -->

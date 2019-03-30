@@ -1,11 +1,42 @@
-<div fxFlex fxLayout="row " fxLayoutAlign="start stretch">
+  <mat-horizontal-stepper>
+    kskjjsj
+    <mat-step label="Meilleurs plats" state="plat"  >        
+        <app-menu-lateral></app-menu-lateral>    
+    </mat-step>
+    <mat-step label="Recettes" state="tv">
+        <app-menu-movie></app-menu-movie>
+    </mat-step>
+    <mat-step label="Restaurants" state="resto" >
+        <app-menu-restaurant></app-menu-restaurant>  
+      </mat-step>  
 
-  <div  fxFlex="1 1 45%" fxLayout="row wrap" fxLayoutAlign="start center"  class="mat-elevation-z10">
+  <ng-template matStepperIcon="plat">
+      <mat-icon>cake</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="tv">
+      <mat-icon>tv</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="resto">
+        <mat-icon>restaurant</mat-icon>
+      </ng-template>
+  </mat-horizontal-stepper>
+
+ <!--  <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="tv">
+      <mat-icon>tv</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="resto">
+        <mat-icon>tv</mat-icon>
+      </ng-template>
+ -->
+<!-- 
+  <div   fxLayout="row" fxLayout.sm="column nowrap"
+   fxLayoutAlign="start center"  class="mat-elevation-z1">
     <app-menu-lateral></app-menu-lateral>    
   </div>
-
-  <div  fxFlex="1 1 auto" fxLayout="column stretch"  class="mat-elevation-z2">
-    <app-menu-movie></app-menu-movie>
-  </div>
-
-</div>
+ -->
+<!-- <div   fxLayout="column stretch"  class="mat-elevation-z1">
+  <app-menu-movie></app-menu-movie>
+</div> -->

@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PlyrComponent } from 'ngx-plyr';
 import Plyr from  'plyr';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { startWith, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-menu-movie',
@@ -15,11 +18,28 @@ plyr: PlyrComponent;
  
 // or get it from plyrInit event
 player: Plyr;
+
+searchControl = new FormControl();
+modelFiltered = new Observable<string[]>();
  
 
   constructor() { }
 
   ngOnInit() {
+    this.modelFiltered = this.searchControl.valueChanges.pipe(
+      startWith(null),
+      tap(search => console.log(this.models.filter(model => console.log(model.name.toLowerCase()) )) ),
+      map(search => {
+        if(!search){
+          return this.models.map(model => model.name);
+        }
+        else{
+          return this.models.filter(model => {
+            return model.name.toLowerCase().startsWith(search);
+          });
+        }
+      })
+    )
   }
 
   videoSources: Plyr.Source[] = [
