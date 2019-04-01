@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ComposantsRoutingModule } from './composants-routing.module';
 import { MaterialModule } from "../material.module";
+import { DirectiveModule } from '../directives.module';
+
 import { HomeComponent } from './home/home.component';
 
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
@@ -14,6 +16,7 @@ import { VgOverlayPlayModule } from "videogular2/overlay-play";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MenuRestaurantComponent } from './menu-restaurant/menu-restaurant.component';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { RechercheComponent } from './recherche/recherche.component';
 
 
 @NgModule({
@@ -21,6 +24,7 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     MenuLateralComponent,
     MenuMovieComponent,
     MenuRestaurantComponent,
+    RechercheComponent,
   ],
   imports: [
     CommonModule,
@@ -29,9 +33,10 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
     VgControlsModule,
     VgOverlayPlayModule,
     ComposantsRoutingModule,
-    MaterialModule,
+    MaterialModule,    
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,    
+    DirectiveModule,
   ],
   providers: [
     {

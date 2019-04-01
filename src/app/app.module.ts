@@ -15,14 +15,13 @@ import { MaterialModule } from "./material.module";
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    HeaderComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    
+    MaterialModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]

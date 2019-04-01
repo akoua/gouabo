@@ -1,7 +1,5 @@
-<h3>Recheche</h3>
-<mat-form-field>
-  <input matInput placeholder="Recherche" [matAutocomplete]="liste" [formControl]="searchControl" >
-</mat-form-field>
+<app-recherche></app-recherche>
+
 <mat-autocomplete #liste="matAutocomplete">
   <mat-option *ngFor="let model of modelFiltered | async" [value]="model"> {{model}} </mat-option>
 </mat-autocomplete>
