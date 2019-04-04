@@ -1,15 +1,59 @@
 
-  <form fxLayout="column" fxLayoutGap="1%" [formGroup]="saveFoodForm" (ngSubmit)="saveFood()" >
-    <mat-form-field appearance="outline" >
-        <mat-label>Nom utilisateur</mat-label>
-      <input matInput placeholder="Nom utilisateur" formControlName="nom" maxlength="25">
-      <mat-hint align="end"> {{saveFoodForm.get('nom').value.length}} /25</mat-hint>
-    </mat-form-field>   
-      <!-- <mat-form-field appearance="outline">
-          <mat-label></mat-label>
-          <input matInput placeholder=""  formControlName="">
+  <div fxLayout="row" fxLayoutAlign="center start">
+      
+    <form fxLayout="column" fxLayoutGap="1%" 
+    style="width: 50%"
+    [formGroup]="saveFoodForm" (ngSubmit)="saveFood()" >
+    <h3 >Enregistrer un plat</h3>
+      <mat-form-field appearance="outline" >
+          <mat-label>Nom utilisateur</mat-label>
+        <input matInput placeholder="Nom utilisateur" formControlName="nom" maxlength="50">
+        <mat-hint align="end"> {{saveFoodForm.get('nom').value.length}} /50</mat-hint>
+      </mat-form-field>   
+      <mat-form-field appearance="outline">
+        <mat-label>Le pays d'origine</mat-label>
+        <input matInput placeholder="Pays d'origine du plat" [matAutocomplete]="auto" formControlName="pays">
+      </mat-form-field>  
+      <mat-autocomplete #auto="matAutocomplete" >
+        <mat-option *ngFor="let country  of listCountryFiltered | async" [value]="country" > {{country}} </mat-option>
+      </mat-autocomplete>
+      <mat-form-field appearance="outline">
+          <mat-label>Les ethnies</mat-label>
+          <input matInput placeholder="Origine ethnique" [matAutocomplete]="eth" formControlName="ethnies">
         </mat-form-field>  
-        <mat-form-field appearance="outline">
+        <mat-autocomplete #eth="matAutocomplete" >
+          <mat-option *ngFor="let ethnie  of listEthniesFiltered | async" [value]="ethnie" > {{ethnie}} </mat-option>
+        </mat-autocomplete>                      
+          <mat-form-field appearance="outline">
+              <mat-label>Description</mat-label>
+              <input matInput placeholder="Description"  formControlName="description">
+            </mat-form-field>  
+            <div formArrayName="ingredients" >
+                <button mat-button (click)="addIngredient()" style="background-color: rgba(66, 66, 143,0.5);">
+                  Ajouter les ingredients
+                </button>
+                <div>
+      
+                  <mat-form-field appearance="outline" *ngFor="let ingre of saveFoodForm.get('ingredients').controls;
+                   let i = index; ">
+                      <mat-label>Ingredients</mat-label>
+                      <input matInput placeholder=`Ingredient`  [formControlName]="i">
+                    </mat-form-field>
+                </div>
+              </div>   
+            <mat-form-field appearance="outline">
+                <mat-label>Temps de cuisson</mat-label>
+                <input matInput placeholder="Temps de cuisson"  formControlName="timeCuisson">
+              </mat-form-field> 
+              <mat-form-field appearance="outline">
+                  <mat-label>Photo</mat-label>
+                  <input matInput placeholder="Photo du plat"  formControlName="photo">
+                </mat-form-field>  
+                <mat-form-field appearance="outline">
+                    <mat-label>Video</mat-label>
+                    <input matInput placeholder="Video de preparation"  formControlName="video" >
+                  </mat-form-field>  
+        <!-- <mat-form-field appearance="outline">
             <mat-label></mat-label>
             <input matInput placeholder=""  formControlName="">
           </mat-form-field>  
@@ -28,7 +72,13 @@
                 <mat-form-field appearance="outline">
                     <mat-label></mat-label>
                     <input matInput placeholder=""  formControlName="">
-                  </mat-form-field>   -->
-         
-    <button mat-raised-button color="primary" >Se Connecter</button>
-  </form>
+                  </mat-form-field>  
+                  <mat-form-field appearance="outline">
+                      <mat-label></mat-label>
+                      <input matInput placeholder=""  formControlName="">
+                    </mat-form-field>   -->
+           
+      <button  mat-raised-button color="primary" style="width: 30%;" fxLayoutAlign="center start" >Se Connecter</button>    
+    </form>
+  </div>
+  {{listEthnies2 | json}}

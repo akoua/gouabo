@@ -19,7 +19,7 @@
         <input matInput formControlName="ville" [matAutocomplete]="auto" placeholder="Choisir la ville">
       </mat-form-field>
   
-      <mat-autocomplete #auto="matAutocomplete">
+      <mat-autocomplete #auto="matAutocomplete"> 
         <mat-option *ngFor="let ville of filterVilles | async" [value]="ville"> {{ville}} </mat-option>
       </mat-autocomplete>
   

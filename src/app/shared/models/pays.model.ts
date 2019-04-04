@@ -1,10 +1,10 @@
 
 export class Pays{
     constructor(
-        public nom: string,
-        public ville: string[]
+        public pays: string,
+        public ethnies: string[]
     ){
-        this.nom = nom;
-        this.ville = ville;
+        this.pays = pays;
+        this.ethnies = ethnies;
     }
 }
