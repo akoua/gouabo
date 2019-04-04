@@ -10,8 +10,8 @@ import {startWith, map} from 'rxjs/operators' ;
 })
 export class RechercheComponent implements OnInit {
 
-  private searchForm: FormGroup;
-  private villes: string[] = [
+  public searchForm: FormGroup;
+  public villes: string[] = [
     "Abidjan",
     "Yamoussoukro",
     "Man",
@@ -19,7 +19,7 @@ export class RechercheComponent implements OnInit {
     
   ]
 
-  private filterVilles: Observable<string[]>;
+  public filterVilles: Observable<string[]>;
 
   constructor(private fb: FormBuilder) { }
 

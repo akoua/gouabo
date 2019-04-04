@@ -5,24 +5,37 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import { ComposantsModule } from "./composants/composants.module";
 import { MaterialModule } from "./material.module";
+import { ConnexionComponent } from './authentification/connexion/connexion.component';
+import { InscriptionComponent } from './authentification/inscription/inscription.component';
+import { ConnoComponent } from './authentification/conno/conno.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,    
+    HeaderComponent,   
+    ConnexionComponent,
+    ConnoComponent, 
+    InscriptionComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,    
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
+  entryComponents: [
+      ConnexionComponent,
+      InscriptionComponent,
+      ConnoComponent
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

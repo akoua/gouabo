@@ -6,8 +6,17 @@
       >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item (click)="drawer.toggle()">Nos meilleurs plats</a>
-      <a mat-list-item href="#">Nos meilleurs cuisiniers (ières)</a>
+      <a mat-list-item (click)="drawer.toggle()"         
+        routerLinkActive="active"
+      >
+      Nos meilleurs plats
+    </a>
+      <a mat-list-item 
+       [routerLink]="['/']"
+        routerLinkActive="active"
+      >
+      Nos meilleurs cuisiniers (ières)
+    </a>
       <a mat-list-item href="#">Plats d'ailleurs</a>
       <a mat-list-item href="#">Restaurant proche</a>      
     </mat-nav-list>
@@ -29,20 +38,44 @@
       fxLayout="row nowrap"
       fxLayoutAlign="end end"
       >
-      <button mat-button     
-      >          
-          <mat-icon aria-label="icon">person</mat-icon>
-        Se connecter                
-      </button>
-      <button mat-button >          
-          <mat-icon aria-label="icon">person_add</mat-icon>
-        S'inscrire                
-      </button>
+        <div *ngIf="!toggleHeader" >
+          <button mat-button  (click) ="openDialog()"
+          >          
+              <mat-icon aria-label="icon">person</mat-icon>
+            Se connecter                
+          </button>
+          <button mat-button (click) ="openDialogI()" >          
+              <mat-icon aria-label="icon">person_add</mat-icon>
+            S'inscrire                
+          </button>
+        </div>
+        <div *ngIf="toggleHeader">
+            <button mat-button  (click) ="openDialog()"
+            >          
+                <mat-icon aria-label="icon">person</mat-icon>
+              Accueil            
+            </button>
+            <button mat-button (click) ="openDialogI()" >          
+                <mat-icon aria-label="icon">person_add</mat-icon>
+              Votre Compte                
+            </button>
+            <button mat-button [matMenuTriggerFor]="menu" >          
+                <mat-icon aria-label="icon">toc</mat-icon>                         
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-button (click)="savePlace()" >Enregistrer un lieu</button>
+              <button mat-button (click)="saveFood()">Enregistrer un plat</button>
+              <button mat-button mat-raised-button color="warn" (click)="deconno()" >
+                Deconnexion
+                <!-- <mat-icon aria-label="icon">clear</mat-icon>   -->
+              </button>
+            </mat-menu>
+          </div>
       </div>
       
       
     </mat-toolbar>
-      
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

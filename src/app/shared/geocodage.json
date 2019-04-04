@@ -1,0 +1,97 @@
+[
+    {
+        "pays": "Afrique du Sud",
+        "ethnies": [
+            "Basuto",
+            "Batswana",
+            "Bochiman",
+            "Hottentots",
+            "Ndebele",
+            "Pedi",
+            "Sothos",
+            "Swaza",
+            "Tsonga",
+            "Tswana",
+            "Twana",
+            "Venda",
+            "Xhosa",
+            "Zoulou"
+        ]
+    },
+    {
+        "pays": "Algérie",
+        "ethnies": [
+            "Kabyles",
+            "Chaouïas",
+            "Zénètes",
+            "Mozabites",
+            "Touaregs",
+            "Berbères (ou Imazighen)"
+        ]
+    },
+    {
+        "pays": "Angola",
+        "ethnies": [
+            "Bakongo",
+            "Kimbundu",
+            "Ovimbundu",
+            "Tshokwe"
+        ]
+    },
+    {
+        "pays": "Bénin",
+        "ethnies": [
+            "Adja-gbé",
+            "Ayizo-gbé",
+            "Bariba",
+            "Dendi",
+            "Ditammari",
+            "Fon-gbe",
+            "Gn-gbé",
+            "Mahis",
+            "Nagots",
+            "Peul",
+            "Pila-Pila",
+            "Sombas",
+            "Tem",
+            "Yoruba"
+        ]
+    },
+    {
+        "pays": "Botswana",
+        "ethnies": [
+            "Basarwa",
+            "Kalanga",
+            "Kgalagadi",
+            "Tswana (ou Setswana)"
+        ]
+    },
+    {
+        "pays": "",
+        "ethnies": []
+    },
+    {
+        "pays": "",
+        "ethnies": []
+    },
+    {
+        "pays": "",
+        "ethnies": []
+    },
+    {
+        "pays": "",
+        "ethnies": []
+    },
+    {
+        "pays": "",
+        "ethnies": []
+    },
+    {
+        "pays": "",
+        "ethnies": []
+    },
+    {
+        "pays": "",
+        "ethnies": []
+    }
+]

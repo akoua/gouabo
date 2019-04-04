@@ -1,0 +1,34 @@
+
+  <form fxLayout="column" fxLayoutGap="1%" [formGroup]="saveFoodForm" (ngSubmit)="saveFood()" >
+    <mat-form-field appearance="outline" >
+        <mat-label>Nom utilisateur</mat-label>
+      <input matInput placeholder="Nom utilisateur" formControlName="nom" maxlength="25">
+      <mat-hint align="end"> {{saveFoodForm.get('nom').value.length}} /25</mat-hint>
+    </mat-form-field>   
+      <!-- <mat-form-field appearance="outline">
+          <mat-label></mat-label>
+          <input matInput placeholder=""  formControlName="">
+        </mat-form-field>  
+        <mat-form-field appearance="outline">
+            <mat-label></mat-label>
+            <input matInput placeholder=""  formControlName="">
+          </mat-form-field>  
+          <mat-form-field appearance="outline">
+              <mat-label></mat-label>
+              <input matInput placeholder=""  formControlName="">
+            </mat-form-field>  
+            <mat-form-field appearance="outline">
+                <mat-label></mat-label>
+                <input matInput placeholder=""  formControlName="">
+              </mat-form-field>  
+              <mat-form-field appearance="outline">
+                  <mat-label></mat-label>
+                  <input matInput placeholder=""  formControlName="">
+                </mat-form-field>  
+                <mat-form-field appearance="outline">
+                    <mat-label></mat-label>
+                    <input matInput placeholder=""  formControlName="">
+                  </mat-form-field>   -->
+         
+    <button mat-raised-button color="primary" >Se Connecter</button>
+  </form>

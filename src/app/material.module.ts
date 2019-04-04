@@ -16,6 +16,8 @@ import {
   MatStepperModule,
   MatSelectModule,  
   MatDialogModule,
+  MatDividerModule,
+  MatMenuModule,
 } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -35,7 +37,9 @@ const MATERIAL = [
   MatButtonModule,
   MatStepperModule,
   MatSelectModule,  
-  MatDialogModule
+  MatDialogModule,
+  MatDividerModule,
+  MatMenuModule
 ]
 @NgModule({
   declarations: [],

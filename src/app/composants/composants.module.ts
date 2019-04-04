@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import { ComposantsRoutingModule } from './composants-routing.module';
 import { MaterialModule } from "../material.module";
 import { DirectiveModule } from '../directives.module';
@@ -19,12 +20,14 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { RechercheComponent } from './recherche/recherche.component';
 
 
+
+
 @NgModule({
   declarations: [HomeComponent,
     MenuLateralComponent,
     MenuMovieComponent,
     MenuRestaurantComponent,
-    RechercheComponent,
+    RechercheComponent,    
   ],
   imports: [
     CommonModule,
@@ -34,10 +37,10 @@ import { RechercheComponent } from './recherche/recherche.component';
     VgOverlayPlayModule,
     ComposantsRoutingModule,
     MaterialModule,    
-    FormsModule,
+    FormsModule,    
     ReactiveFormsModule,    
     DirectiveModule,
-  ],
+  ], 
   providers: [
     {
       provide: STEPPER_GLOBAL_OPTIONS,

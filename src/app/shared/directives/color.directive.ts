@@ -15,7 +15,7 @@ export class ColorDirective implements OnInit{
     }
 
     ngOnInit(): void {  
-        console.log(this.el.nativeElement);
+        //console.log(this.el.nativeElement);
         //this.renderer.setStyle(this.el.nativeElement, 'color', 'red');
         this.backgroundColor;
         this.borderRadius;        
