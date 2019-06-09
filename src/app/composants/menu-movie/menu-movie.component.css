@@ -1,0 +1,35 @@
+.videogular-container {
+	width: 100%;
+	height: 90%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.mat-expansion-panel-header{
+	background:blue;
+}
+ 
+@media (min-width: 1200px) {
+	.videogular-container {
+		margin: 0 5px 0 5px;
+		width: 100%;
+		height: 85%;		
+	}
+	
+}
+ 
+@media (min-width: 992px) and (max-width: 1199px) {
+	.videogular-container {
+		margin: 0 5px 0 5px;
+		width: 100%;
+		height: 85%;
+	}
+}
+ 
+@media (min-width: 768px) and (max-width: 991px) {
+	.videogular-container {
+		margin: 0 5px 0 5px;
+		width: 100%;
+		height: 85%;
+	}
+}

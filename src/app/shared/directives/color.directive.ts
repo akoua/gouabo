@@ -21,8 +21,8 @@ export class ColorDirective implements OnInit{
         this.borderRadius;        
     }
 
-    @HostListener('click') doClick(){
-        //this.renderer.setStyle(this.el.nativeElement, 'color', 'black');
-        //this.backgroundColor = this.textColor;        
-    }
+
+    @HostListener('document:keypress', ['$event']) onKeyPress(event: KeyboardEvent) {
+        console.log("Pressed key", event.keyCode);
+      }
 }

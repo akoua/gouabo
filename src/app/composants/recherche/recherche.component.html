@@ -1,28 +1,31 @@
-
 <mat-card class="example-card ">
-  <form fxLayout.xs="column" style="margin: 0 5% 0 5%"  fxLayout.xs="column" fxLayoutGap.gt-xs="1%" [formGroup]="searchForm"  (ngSubmit)="valider()">    
+  <form fxLayout.xs="row"  fxLayout.xs="column" fxLayoutGap.gt-xs="3%"
+    [formGroup]="searchForm" (ngSubmit)="valider()">
 
-      <mat-form-field appColor >
-        <mat-label>Votre recherche</mat-label>
-        <input matInput placeholder="label" formControlName="plat"  >
-        <mat-hint suffix>blal</mat-hint>
-      </mat-form-field>    
-  
-        <mat-form-field  appColor >
-        <mat-select placeholder="Categorie" formControlName="categorie" >
-          <mat-option value="plat"> Plat </mat-option>
-          <mat-option value="restaurant"> Restaurant </mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <mat-form-field appColor >
-        <input matInput formControlName="ville" [matAutocomplete]="auto" placeholder="Choisir la ville">
-      </mat-form-field>
-  
-      <mat-autocomplete #auto="matAutocomplete"> 
-        <mat-option *ngFor="let ville of filterVilles | async" [value]="ville"> {{ville}} </mat-option>
-      </mat-autocomplete>
-  
-      <button mat-raised-button color="primary">Rechercher</button>
-    </form>
+    <mat-form-field appColor class="input-class">
+      <mat-label>Votre recherche</mat-label>      
+      <input matInput type="text" placeholder="Clearable input" formControlName="plat" >
+      <button mat-button *ngIf="searchForm.controls.plat.value" matSuffix mat-icon-button aria-label="Clear" 
+      (click)="erasable()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>    
+
+    <mat-form-field appColor class="space-input">
+      <mat-select placeholder="Categorie" formControlName="categorie">
+        <mat-option value="plat"> Plat </mat-option>
+        <mat-option value="restaurant"> Restaurant </mat-option>
+      </mat-select>
+    </mat-form-field>    
+
+    <mat-form-field appColor class="space-input">
+      <input matInput formControlName="ville" [matAutocomplete]="auto" placeholder="Choisir la ville">
+    </mat-form-field>
+
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let ville of filterVilles | async" [value]="ville"> {{ville}} </mat-option>
+    </mat-autocomplete>
+
+    <button mat-raised-button color="primary"  class="btn-class; space-input">Rechercher</button>
+  </form>
 </mat-card>

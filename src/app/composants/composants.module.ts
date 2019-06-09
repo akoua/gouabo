@@ -14,6 +14,8 @@ import { PlyrModule } from "ngx-plyr";
 import { VgCoreModule } from "videogular2/core";
 import { VgControlsModule } from "videogular2/controls";
 import { VgOverlayPlayModule } from "videogular2/overlay-play";
+import { VgBufferingModule } from "videogular2/buffering";
+import { VgStreamingModule } from "videogular2/streaming";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MenuRestaurantComponent } from './menu-restaurant/menu-restaurant.component';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
@@ -35,6 +37,8 @@ import { RechercheComponent } from './recherche/recherche.component';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
+    VgBufferingModule,
+    VgStreamingModule,   
     ComposantsRoutingModule,
     MaterialModule,    
     FormsModule,    

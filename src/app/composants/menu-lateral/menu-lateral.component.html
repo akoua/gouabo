@@ -10,10 +10,12 @@
               <mat-card-subtitle>Pays</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content class="content" (click)="readMovie()">
-              <img mat-card-image src="../../../assets/burger.jpeg" alt="img">
+              <img mat-card-image src="../../../assets/burger.jpeg" alt="img" (click)="voirMenu()" >
             </mat-card-content> 
           </mat-card>    
     </div>  
+
+    {{plats$|async|json}}
   <!-- <mat-step label="Meilleurs restaurants">    
        
         

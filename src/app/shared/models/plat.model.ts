@@ -2,14 +2,16 @@ import { Ingredient } from './ingredient.model';
 
 export class Plat{
 
-    constructor(
-        public nom,
-        public origine,        
+    constructor(        
+        public nom: string,
+        public pays: string,        
         public ingredients: Ingredient[],
-        public note?,
+        public id?: string,
+        public note?: number,
     ){
+        this.id = id;
         this.nom = nom;
-        this.origine = origine;
+        this.pays = pays;
         this.note = note;
         this.ingredients = ingredients;
     }

@@ -6,40 +6,138 @@
   margin-top: 0.5%;
   max-width: 100%;  
   margin-bottom: 1%;  
-  padding: 0.5% 0% 0.5% 0%;
+  margin-left: 2%;
   background-color: dodgerblue;  
 }
 
-@media screen and (max-width: 753px){
-  .example-card{    
-    max-width: 100%;
-    padding: 0.5% 0% 0.5% 0%;
-  }
+.input-class{
+  margin: 0 5% 0 5%;
+}
+.btn-class{
+  margin: 0 25% 0 40%;
+}
+.space-input{
+  margin: 0;  
 }
 
-@media screen and (max-width: 960px){
+
+@media screen and (min-width: 100px){
   .example-card{
-    max-width: 90%;
-    margin-left: 5%;    
-    padding: 0.5% 0% 0.5% 0%;
+    max-width: 100%;                     
   }
-}
+  
+  .btn-class{
+    margin: 0 ;
+  }
+
+  .input-class{
+    margin: 0%;
+  }
+
+  .space-input{
+    margin: 5% 0 0 0;
+  }
+} 
+
+@media screen and (min-width: 500px){
+  .example-card{
+    max-width: 100%;     
+    padding: 1% 1% 0 0%;      
+  }
+  
+  .input-class{
+    margin: 0%;
+  }
+} 
+
+@media screen and (min-width: 500px){
+  .example-card{
+    max-width: 100%;     
+    padding: 1% 1% 0 0%;      
+  }
+  
+  .input-class{
+    margin: 0%;
+  }
+  .space-input{
+    margin: 0;  
+  }
+} 
+
+@media screen and (min-width: 723px){
+  .example-card{
+    max-width: 100%;           
+  }
+
+  .input-class{
+    margin: 0%;
+  }
+  .space-input{
+    margin: 0;  
+  }
+} 
+
+@media screen and (min-width: 826px){
+  .example-card{
+    max-width: 100%;           
+  }
+
+  .btn-class{
+    margin: 0%;
+  }
+
+  .input-class{
+    margin: 0%;
+  }
+  .space-input{
+    margin: 0;  
+  }
+} 
 
 @media screen and (min-width: 961px){
   .example-card{
-    max-width: 77%;
-    margin-left: 5%;    
-    padding: 0.5% 0% 0.5% 0%;
+    max-width: 90%;           
   }
-}
+
+  .input-class{
+    margin: 0%;
+  }
+  .space-input{
+    margin: 0;  
+  }
+} 
+
+@media screen and (min-width: 1026px){
+  .example-card{
+    max-width: 100%;           
+  }
+  .btn-class{
+    margin: 0%;
+  }
+
+  .input-class{
+    margin: 0%;
+  }
+  .space-input{
+    margin: 0;  
+  }
+} 
 
   @media screen and (min-width: 1200px){
     .example-card{
-      max-width: 68%;
+      max-width: 80%;
       margin-left: 5%;    
       padding: 0.5% 0% 0.5% 0%;
     }
-}
-/* .mat-form-field-wrapper{
-  padding: 0px;
-} */
+    .input-class{
+      margin: 0% 0% 0% 5%;
+    }
+
+    .btn-class{
+      margin: 0%;
+    }
+
+    .space-input{
+      margin: 0;  
+    }
+} 

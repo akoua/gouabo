@@ -59,4 +59,9 @@ export class RechercheComponent implements OnInit {
     console.log(this.searchForm)
   }
 
+  erasable(): void{
+    console.log(this.searchForm.get('plat').value);
+    this.searchForm.get('plat').setValue('');
+  }
+
 }
