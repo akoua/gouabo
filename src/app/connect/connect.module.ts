@@ -1,24 +1,29 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ConnectRoutingModule } from './connect-routing.module';
+
+/**
+ * Components
+ */
 import { ConnectHomeComponent } from './connect-home/connect-home.component';
-import { MaterialModule } from '../material.module';
 import { SaveFoodComponent } from './save-food/save-food.component';
 import { SavePlaceComponent } from './save-place/save-place.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+/**
+ * Vue
+ */
+import { MyLayoutModule } from '../shared/modules/layout.module';
 
 @NgModule({
   declarations: [
     ConnectHomeComponent,
     SaveFoodComponent,
-    SavePlaceComponent,
-    
+    SavePlaceComponent
   ],
-  imports: [
-    CommonModule,
+  imports: [    
+    MyLayoutModule,    
     ConnectRoutingModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule
   ]

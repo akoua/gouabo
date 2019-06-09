@@ -3,12 +3,12 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { MatDialog } from "@angular/material";
-import { ConnexionComponent } from '../authentification/connexion/connexion.component'
-import { InscriptionComponent } from '../authentification/inscription/inscription.component';
+import { ConnexionComponent } from '../../authentification/connexion/connexion.component'
+import { InscriptionComponent } from '../../authentification/inscription/inscription.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthentificationService } from '../shared/services/authentification.service';
-import { PlaceService } from '../shared/services/place.service';
-import { FoodService } from '../shared/services/food.service';
+import { AuthentificationService } from '../services/authentification.service';
+import { PlaceService } from '../services/place.service';
+import { FoodService } from '../services/food.service';
 
 
 

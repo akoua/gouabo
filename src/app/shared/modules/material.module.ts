@@ -1,7 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import 'hammerjs';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatListModule,
   MatGridListModule,
@@ -22,10 +19,8 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
 } from '@angular/material';
-import { LayoutModule } from '@angular/cdk/layout';
 
-const MATERIAL = [
-  FlexLayoutModule,
+const MATERIAL = [  
   MatListModule,
   MatGridListModule,
   MatIconModule,
@@ -35,7 +30,6 @@ const MATERIAL = [
   MatFormFieldModule,
   MatInputModule,
   MatFormFieldModule,
-  LayoutModule,
   MatToolbarModule,
   MatButtonModule,
   MatStepperModule,
@@ -48,10 +42,8 @@ const MATERIAL = [
   MatNativeDateModule,
   MatListModule
 ];
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
+@NgModule({  
+  imports: [    
     ...MATERIAL,
   ],
   exports: MATERIAL

@@ -21,6 +21,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: SavePlaceComponent    
   },
+  {
+    path:'profile',
+    loadChildren:'../profil/profil.module#ProfilModule'
+  }
     
 ];
 
