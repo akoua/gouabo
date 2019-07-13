@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Plat } from '../models/plat.model';
+import { Plat } from '../../models/plat.model';
 
 export const PLAT_GET = "[plat] Get";
 export const PLAT_CREATE = "[plat] Create";

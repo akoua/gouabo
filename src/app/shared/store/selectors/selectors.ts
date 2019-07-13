@@ -1,4 +1,4 @@
-import { PlatState } from './plat.reducers';
+import { PlatState } from '../reducers/plat.reducers';
 import {createFeatureSelector, createSelector} from "@ngrx/store";
 
 const platsSelector = createFeatureSelector<PlatState>("plats");

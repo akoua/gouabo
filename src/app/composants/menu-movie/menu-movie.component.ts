@@ -155,7 +155,7 @@ export class MenuMovieComponent implements OnInit {
   }
 
   playVideo(): void {
-    console.log('je suis vraimenet play');
+    //console.log('je suis vraimenet play');
     //this.api.play();
 }
   hideControls(): void {    

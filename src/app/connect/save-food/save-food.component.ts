@@ -7,7 +7,7 @@ import { startWith, map, tap } from 'rxjs/operators';
 import { AngularFirestore } from "@angular/fire/firestore";
 import { Store } from '@ngrx/store';
 import { State } from 'src/app/shared/store';
-import * as platAction from "../../shared/store/plat.action"
+import * as platAction from "../../shared/store/actions/plat.action"
 import { Plat } from 'src/app/shared/models/plat.model';
 import { Ingredient } from 'src/app/shared/models/ingredient.model';
 

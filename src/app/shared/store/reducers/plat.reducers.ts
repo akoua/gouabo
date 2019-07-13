@@ -1,7 +1,5 @@
-import { ActionReducerMap, Action } from '@ngrx/store';
-import { Plat } from '../models/plat.model';
-import { state } from '@angular/animations';
-import * as PlatAction from "./plat.action";
+import { Plat } from '../../models/plat.model';
+import * as PlatAction from "../actions/plat.action";
 
 export interface PlatState{
     datas: {
@@ -20,7 +18,7 @@ const initialState = {
 }
 
 export function platReducer(state: PlatState = initialState, action: PlatAction.PlatActionType): PlatState{
-    console.log(state, action);
+    //console.log(state, action);
     switch (action.type) {
         case PlatAction.FETCH_PLAT: {
             return{

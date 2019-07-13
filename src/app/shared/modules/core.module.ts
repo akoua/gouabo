@@ -25,7 +25,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreRouterConnectingModule, routerReducer } from "@ngrx/router-store";
 import { reducers } from '../store';
-import { PlatsEffects } from '../store/plat.effects';
+import { PlatsEffects } from '../store/effects/plat.effects';
 
 /**
  * environnement
@@ -33,6 +33,7 @@ import { PlatsEffects } from '../store/plat.effects';
 import { environment } from 'src/environments/environment';
 import { MyLayoutModule } from './layout.module';
 import { RouterModule } from '@angular/router';
+import { AuthEffects } from '../store/effects/auth.effects';
 
 export const COMPONENTS = [
    HeaderComponent,
@@ -55,9 +56,10 @@ export const COMPONENTS = [
     AngularFireStorageModule, 
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot(reducers),  
-    EffectsModule.forRoot([PlatsEffects]),
+    EffectsModule.forRoot([PlatsEffects, AuthEffects]),
     StoreDevtoolsModule.instrument({
-      name:'store general'
+      name:'store general',
+      logOnly: environment.production
     })  
   ],
   entryComponents: [

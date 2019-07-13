@@ -23,6 +23,6 @@ export class ColorDirective implements OnInit{
 
 
     @HostListener('document:keypress', ['$event']) onKeyPress(event: KeyboardEvent) {
-        console.log("Pressed key", event.keyCode);
+        //console.log("Pressed key", event.keyCode);
       }
 }

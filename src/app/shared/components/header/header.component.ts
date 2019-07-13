@@ -7,8 +7,7 @@ import { ConnexionComponent } from '../../../authentification/connexion/connexio
 import { InscriptionComponent } from '../../../authentification/inscription/inscription.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthentificationService } from '../../services/authentification.service';
-import { PlaceService } from '../../services/place.service';
-import { FoodService } from '../../services/food.service';
+
 
 
 

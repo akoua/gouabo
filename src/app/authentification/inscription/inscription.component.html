@@ -9,6 +9,12 @@
   <mat-divider style="padding-bottom: 2px;"
     [inset]="true">
   </mat-divider>  -->
+  <div *ngIf="err$ | async; let error" style="color:red">
+    {{error.message}}
+  </div>
+  <div *ngIf="success" style="color:green">
+      Un mail vous a été envoyé
+    </div>
   <form fxLayout="column" fxLayoutGap="0.5%" [formGroup]="inscriptionForm" (ngSubmit)="inscription()" >
     <mat-form-field appearance="outline" >
         <mat-label>Nom utilisateur</mat-label>
@@ -21,8 +27,8 @@
       </mat-form-field>
       <mat-form-field appearance="outline">
           <mat-label>Mot de passe</mat-label>
-          <input matInput placeholder="Mot de passe" type="password" formControlName="password">
-        </mat-form-field>
+          <input matInput placeholder="Mot de passe" type="password" formControlName="password">         
+      </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Confirmation du mot de passe</mat-label>
       <input matInput placeholder="Confirmation"  type="password" formControlName="confirmPassword" >

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { State } from 'src/app/shared/store';
-import * as PlatAction from "../../shared/store/plat.action";
+import * as PlatAction from "../../shared/store/actions/plat.action";
 import { Observable } from 'rxjs';
 import { Plat } from 'src/app/shared/models/plat.model';
-import { PlatState } from 'src/app/shared/store/plat.reducers';
+import { PlatState } from 'src/app/shared/store/reducers/plat.reducers';
 import { map } from 'rxjs/operators';
-import { platsListSelector, platlistArraySelector } from "../../shared/store/selectors";
+import { platsListSelector, platlistArraySelector } from "../../shared/store/selectors/selectors";
 
 
 export interface ColRow {

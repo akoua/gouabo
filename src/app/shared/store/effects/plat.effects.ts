@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { Action } from '@ngrx/store';
-import { FETCH_PLAT, FetchPlat, FetchPlatSuccess, FetchPlatError, ADD_PLAT, AddPlat } from './plat.action';
+import { FETCH_PLAT, FetchPlat, FetchPlatSuccess, FetchPlatError, ADD_PLAT, AddPlat } from '../actions/plat.action';
 import { switchMap, map, catchError } from 'rxjs/operators';
-import { FoodService } from '../services/food.service';
-import { Plat } from '../models/plat.model';
+import { FoodService } from '../../services/food.service';
+import { Plat } from '../../models/plat.model';
 
 
 @Injectable()

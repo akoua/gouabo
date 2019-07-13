@@ -9,7 +9,8 @@
     <mat-grid-list cols="1" rowHeight="2:1" gutterSize="5%">
      <!--  <mat-grid-tile *ngFor="let model of models; let index= index" [colspan]="model.cols" [rowspan]="model.rows">   -->
 
-        <vg-player  [keyPress]="api$ | async" #player  class="videogular-container" (onPlayerReady)="onPlayerReady($event)">
+       <!-- <vg-player  [keyPress]="api$ | async" #player  class="videogular-container" (onPlayerReady)="onPlayerReady($event)"> -->
+          <vg-player #player  class="videogular-container" (onPlayerReady)="onPlayerReady($event)">
           <vg-overlay-play></vg-overlay-play>
           <vg-buffering vgFor="singleVideo"></vg-buffering>
 
